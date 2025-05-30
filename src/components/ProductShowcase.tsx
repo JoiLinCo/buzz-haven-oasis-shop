@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Star, ShoppingCart } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ProductShowcase = () => {
   const products = [
@@ -106,10 +107,17 @@ const ProductShowcase = () => {
                   </div>
                 </div>
                 
-                <Button className="w-full bg-honey-600 hover:bg-honey-700 text-white group">
-                  <ShoppingCart className="h-4 w-4 mr-2 group-hover:animate-buzz" />
-                  Add to Cart
-                </Button>
+                <div className="space-y-2">
+                  <Link to={`/product/${product.id}`}>
+                    <Button variant="outline" className="w-full border-honey-600 text-honey-700 hover:bg-honey-100">
+                      View Details
+                    </Button>
+                  </Link>
+                  <Button className="w-full bg-honey-600 hover:bg-honey-700 text-white group">
+                    <ShoppingCart className="h-4 w-4 mr-2 group-hover:animate-buzz" />
+                    Add to Cart
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           ))}
