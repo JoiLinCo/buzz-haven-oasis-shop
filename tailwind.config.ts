@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,23 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				honey: {
+					50: '#FEF7E0',
+					100: '#FDEAA7',
+					200: '#F7DC6F',
+					300: '#F4D03F',
+					400: '#F1C40F',
+					500: '#D4A574',
+					600: '#B7950B',
+					700: '#9A7D0A',
+					800: '#7D6608',
+					900: '#5D4E04'
+				},
+				amber: {
+					DEFAULT: '#FFB347',
+					light: '#FFCC80',
+					dark: '#FF8F00'
 				}
 			},
 			borderRadius: {
@@ -84,11 +102,35 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0px)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
+				},
+				'buzz': {
+					'0%, 100%': {
+						transform: 'translateX(0px)'
+					},
+					'25%': {
+						transform: 'translateX(2px)'
+					},
+					'75%': {
+						transform: 'translateX(-2px)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 3s ease-in-out infinite',
+				'buzz': 'buzz 0.3s ease-in-out infinite'
+			},
+			clipPath: {
+				hexagon: 'polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%)'
 			}
 		}
 	},
